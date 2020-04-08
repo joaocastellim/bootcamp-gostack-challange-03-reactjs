@@ -15,7 +15,10 @@ function App() {
 
   async function handleAddRepository() {
     const response = await api.post('/repositories', {
-      title: `Repository ${Date.now()}`
+      id: "123",
+      url: "https://github.com/joaocastellim",
+      title: "Desafio ReactJS",
+      techs: ["React", "Node.js"],
     });
     setRepositories([...repositories, response.data]);
   }
